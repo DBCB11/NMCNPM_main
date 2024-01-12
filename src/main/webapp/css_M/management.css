@@ -1,0 +1,1219 @@
+.management-container {
+  position: relative;
+}
+
+.management-container .management-sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  color: white;
+  
+}
+
+.management-container .management-sidebar .management-sidebar-title {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: rgba(11, 150, 188, 0.8509803922);
+}
+.management-container .management-sidebar .management-sidebar-title .house-icon {
+  padding-right: 9px;
+  margin-left: 9px;
+}
+.management-container .management-sidebar-content {
+  height: 100%;
+  background-color: #39362c;
+}
+.management-container .management-sidebar-content .management-sidebar-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+
+.management-container .management-sidebar-content .management-sidebar-list ul .active {
+  background-color: #6c6c6c;
+}
+.management-container .management-sidebar-content .management-sidebar-list ul li {
+  height: 70px;
+  padding-left: 20px;
+  border-bottom: 1px solid rgb(165, 165, 165);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.management-container .management-sidebar-content .management-sidebar-list ul li:hover {
+  background-color: #6c6c6c;
+}
+.management-container .management-sidebar-content .management-sidebar-list ul li i {
+  width: 30px;
+  font-size: 20px;
+}
+
+.management-side {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 250px);
+  padding-right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #0b96bc;
+  color: white;
+  z-index: 1;
+}
+
+.management-sidebar-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+}
+.header-search{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.notice {
+  display: flex;
+  align-items: center;
+  margin-right: 8px; 
+}
+.fa-solid.fa-bell,
+.fa-regular.fa-message {
+  font-size: 24px;
+  margin:2vw 2vw;
+  cursor: pointer;border-radius: 30px;
+
+}
+.fa-solid.fa-bell:hover,
+.fa-regular.fa-message:hover {
+  color:yellow;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.admin {
+  display: flex;
+  align-items: center;
+  margin-left:10px;
+  height: 100%; 
+  text-align: right;
+  cursor: pointer;
+}
+.fa-solid.fa-caret-down:hover{
+  color:#d9ff00
+}
+
+.management-sidebar-header .management-sidebar-avatar {
+  background: url("./image/avatar.jpg") center/cover no-repeat;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1vw; 
+}
+
+#a1{
+  font-size: 20px;
+  margin-right: 1vw;
+}
+
+.management-side{
+  display: inline;
+}
+
+
+/* CSS cho .admin-info */
+.admin-info {
+display: none;
+position: absolute;
+margin-top: 5px;
+margin-right:5px ;
+top: 100%; 
+right: 0;
+width: 250px;
+height: 200px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+z-index: 1;
+opacity: 0; 
+transform: translateY(-10px); 
+transition: opacity 0.3s, transform 0.3s;
+transform-origin: top right;
+background-color:whitesmoke;
+border: #26B4FF solid 1px;
+border-radius: 30px;
+}
+
+
+.admin-info.active {
+display: block;
+opacity: 1;
+transform: translateY(0);
+}
+
+
+.admin-info-item {
+
+flex: 1;
+box-sizing: border-box;
+padding: 10px;
+text-align: center;
+
+margin-right: 10px; 
+}
+
+/* CSS cho .admin-info-icons */
+.admin-info-icons {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.admin-info-icons i {
+color: #26B4FF;
+margin: 10px 5px;
+font-size: 20px;
+margin-right: 10px;
+border-radius: 20px;
+cursor: pointer;
+}
+
+
+.admin-info-icons i:hover {
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.admin:hover .admin-info,
+.admin-info.active {
+opacity: 1; 
+transform: translateY(0); 
+}
+
+
+.menu{
+display: none;
+}
+.menu.active{
+display: block;
+}
+
+
+
+
+.management-content-container .profile-header{
+color: #000000;
+font-weight: 600;
+display: flex;
+justify-content: center;
+font-size: 30px;
+height: 40px;
+margin-left: 12px;
+align-items: center;
+margin-top: 10px;
+margin-bottom: 15px;
+
+}
+.management-content-container .profile-header .icon-close{
+  position: absolute;
+  margin-left: 10px;
+  right: 0;
+  top: 0;
+  padding: 12px;
+  font-size: 24px;
+}
+.management-content-container .profile-header .icon-close:hover{
+  cursor: pointer;
+  opacity: 0.5;
+
+}
+.management-content-container .profile-header .title{
+color: #000000;
+font-weight: 600;
+display: flex;
+justify-content: center;
+font-size: 30px;
+height: 40px;
+margin-left: 12px;
+align-items: center;
+margin-top: 10px;
+
+}
+
+
+.post{
+  display: none;
+}
+
+.post.active {
+  display: block;
+}
+
+.list-book-room {
+  display: none;
+}
+
+.list-book-room.active {
+  display: block;
+}
+
+
+.list-staff {
+  display: none;
+}
+
+.list-staff.active {
+  display: block;
+}
+
+
+.account {
+  display: none;
+}
+
+.account.active {
+  display: block;
+}
+
+
+
+.list-room {
+  display: none;
+}
+
+.list-room.active {
+  display: block;
+}
+
+.management-content-container {
+  position: absolute;
+  margin-top: 80px;
+  right: 0;
+  width: calc(100% - 250px);
+}
+.management-content-container .title {
+  color: #000000;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  height: 40px;
+  margin-left: 12px;
+  align-items: center;
+  margin-top: 10px;
+}
+.management-content-container .management-content {
+  background-color: white;
+  margin: 4px 12px 0 16px;
+  padding: 12px 0;
+  border-radius: 8px;
+}
+.management-content-container .management-content .add-room {
+  display: flex;
+  justify-content: flex-end;
+}
+.management-content-container .management-content .btn-add-room {
+  border: none;
+  background-color: #0a96b4;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+.management-content-container .management-content .btn-add-room:hover{
+  background-color: #26B4FF;
+}
+
+.management-content-container .management-content .rooms {
+  margin: 12px 0;
+}
+.management-content-container .management-content .rooms table,
+.management-content-container .management-content .rooms th,
+.management-content-container .management-content .rooms td {
+  border: 1px solid rgb(197, 197, 197);
+}
+.management-content-container .management-content .rooms table {
+  border-collapse: collapse;
+}
+.management-content-container .management-content .rooms td,
+.management-content-container .management-content .rooms th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 12px 8px;
+}
+.management-content-container .management-content .rooms .room:hover {
+  background-color: #edeced;
+}
+.management-content-container .management-content .rooms .room-image {
+  width: 150x;
+  height: 150px;
+  border-radius: 4px;
+}
+.management-content-container .management-content .rooms ul {
+  list-style: none;
+}
+.management-content-container .management-content .rooms ul li {
+  padding: 3px 0;
+}
+
+.management-content-container .management-content .rooms .btn-edit-room {
+  width: 30px;
+  height: 30px;
+  background-color: #0076ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+.management-content-container .management-content .rooms .btn-edit-room:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.management-content-container .management-content .rooms .btn-delete-room {
+  width: 30px;
+  height: 30px;
+  background-color: #d13d3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+.management-content-container .management-content .rooms .btn-delete-room:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+
+
+
+
+
+
+.management-content-container .management-content .add-staff {
+  display: flex;
+  justify-content: flex-end;
+}
+.management-content-container .management-content .btn-add-staff {
+  border: none;
+  background-color: #0a96b4;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.management-content-container .management-content .btn-add-staff:hover{
+  background-color: #26B4FF;
+}
+.management-content-container .management-content .staff {
+  margin: 12px 0;
+}
+.management-content-container .management-content .staff table,
+.management-content-container .management-content .staff th,
+.management-content-container .management-content .staff td {
+  border: 1px solid rgb(197, 197, 197);
+}
+.management-content-container .management-content .staff table {
+  border-collapse: collapse;
+}
+.management-content-container .management-content .staff td,
+.management-content-container .management-content .staff th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 12px 8px;
+}
+.management-content-container .management-content .staff .staff:hover {
+  background-color: #edeced;
+}
+.management-content-container .management-content .staff .room-image {
+  width: 150x;
+  height: 150px;
+  border-radius: 4px;
+}
+.management-content-container .management-content .staff ul {
+  list-style: none;
+}
+.management-content-container .management-content .staff ul li {
+  padding: 3px 0;
+}
+.management-content-container .management-content .staff .btn-edit-staff {
+  width: 30px;
+  height: 30px;
+  background-color: #0076ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+.management-content-container .management-content .staff .btn-edit-staff:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.management-content-container .management-content .staff .btn-delete-staff {
+  width: 30px;
+  height: 30px;
+  background-color: #d13d3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+.management-content-container .management-content .staff .btn-delete-staff:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+
+
+
+.add-staff-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+}
+.add-staff-container.active {
+  display: flex;
+}
+.add-staff-container .add-staff-modal {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  color: black;
+  padding: 4px 20px;
+  border-radius: 4px;
+  position: relative;
+  animation: fadeIn ease 0.5s;
+}
+.add-staff-container .add-staff-modal .icon-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px;
+  font-size: 24px;
+}
+.add-staff-container .add-staff-modal .icon-close:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.add-staff-container .add-staff-modal .title {
+  text-align: center;
+  padding: 12px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+.add-staff-container .add-staff-modal .content input,
+.add-staff-container .add-staff-modal .content select {
+  width: 100%;
+  padding: 5px 14px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #ccc;
+  margin: 4px 0 8px 0;
+}
+.add-staff-container .add-staff-modal .content label {
+  font-weight: 500;
+}
+.add-staff-container .add-staff-modal .content .btn-submit {
+  margin-top: 3%;
+  padding: 8px 20px;
+}
+
+
+
+
+
+.edit-staff-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+}
+.edit-staff-container.active {
+  display: flex;
+}
+.edit-staff-container .edit-staff-modal {
+  width: 50%;
+  height: 73%;
+  background-color: white;
+  color: black;
+  padding: 4px 20px;
+  border-radius: 4px;
+  position: relative;
+  animation: fadeIn ease 0.5s;
+}
+.edit-staff-container .edit-staff-modal .icon-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px;
+  font-size: 24px;
+}
+.edit-staff-container .edit-staff-modal .icon-close:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.edit-staff-container .edit-staff-modal .title {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+.edit-staff-container .edit-staff-modal .content input,
+.edit-staff-container .edit-staff-modal .content textarea {
+  width: 100%;
+  padding: 5px 14px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #ccc;
+  margin: 4px 0 8px 0;
+}
+.edit-staff-container .edit-staff-modal .content label {
+  font-weight: 500;
+}
+.edit-staff-container .edit-staff-modal .content .btn-submit {
+  margin-top: 12px;
+  padding: 8px 20px;
+}
+
+
+
+
+
+ 
+.edit-book-room-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+}
+.edit-book-room-container.active {
+  display: flex;
+}
+.edit-book-room-container .edit-book-room-modal {
+  width: 50%;
+  height: 73%;
+  background-color: white;
+  color: black;
+  padding: 4px 20px;
+  border-radius: 4px;
+  position: relative;
+  animation: fadeIn ease 0.5s;
+}
+.edit-book-room-container .edit-book-room-modal .icon-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px;
+  font-size: 24px;
+}
+.edit-book-room-container .edit-book-room-modal .icon-close:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.edit-book-room-container .edit-book-room-modal .title {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+.edit-book-room-container .edit-book-room-modal .content input,
+.edit-book-room-container .edit-book-room-modal .content textarea {
+  width: 100%;
+  padding: 5px 14px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #ccc;
+  margin: 4px 0 8px 0;
+}
+.edit-book-room-container .edit-book-room-modal .content label {
+  font-weight: 500;
+}
+.edit-book-room-container .edit-book-room-modal .content .btn-submit {
+  margin-top: 12px;
+  padding: 8px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.management-content-container .post-header{
+  color: #000000;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  height: 40px;
+  margin-left: 12px;
+  align-items: center;
+  margin-top: 10px;
+} 
+
+.management-content-container .selection-post{
+  display: inline;
+  margin-left: 900px;
+}
+
+.management-content-container .selection-post .add-post {
+  border: none;
+  background-color: #0a96b4;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+.management-content-container .selection-post .add-post:hover {
+  background-color:#26B4FF
+}
+.management-content-container .selection-post .delete-post {
+  border: none;
+  background-color: #0a96b4;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+.management-content-container .selection-post .delete-post:hover {
+  background-color: #26B4FF;
+}
+
+.management-content-container .post-content{
+  border: #26B4FF solid 1px;
+  margin: 30px 20px 30px 40px;
+  display: block;
+}
+
+.management-content-container .post-content .post-content-list{
+  display: inline-block;
+  color: rgb(0, 119, 255);
+  font-weight: bold;
+  font-size: 23px;
+  width: 700px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  vertical-align: top;
+  text-align: left;
+}
+.management-content-container .post-content .post-content-list .detail{
+color:#0a96b4;
+display: inline-block;
+text-align: right;
+width: 150px;
+margin-top: 80px;
+margin-left: 600px;
+transition-duration: 0.3s;
+cursor: pointer;
+}
+.management-content-container .post-content .post-content-list:hover{
+color:red;
+}
+.management-content-container .post-content .post-content-list .detail:hover{
+color:#26B4FF;
+transform: scale(1.08);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.profile {
+  display: none;
+}
+
+.profile.active {
+  display: block;
+}
+
+.management-content-container .management-profile {
+  margin: 8px 50px;
+}
+.management-content-container .management-profile .profile-input {
+  display: flex;
+  align-items: center;
+  margin: 8px 0 16px 0;
+}
+.management-content-container .management-profile .profile-input i {
+  font-size: 24px;
+  width: 50px;
+}
+.management-content-container .management-profile .profile-input .form-control:focus {
+  border-color: #ccc;
+  box-shadow: none;
+}
+.management-content-container .management-profile label {
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+.list-book-room {
+  display: none;
+}
+.list-book-room .search {
+  margin: 12px 0;
+}
+.list-book-room .search input {
+  margin: 16px 12px 0 16px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  width: 400px;
+  border-radius: 3px;
+}
+.list-book-room .search .btn-search {
+  width: 120px;
+  height: 42px;
+  background-color: #1f9448;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+.list-book-room.active {
+  display: block;
+}
+
+.management-content-container .management-content .rooms .book-room ul {
+  padding: 0 10px;
+  margin: 8px 0;
+}
+.management-content-container .management-content .rooms .book-room ul span {
+  font-weight: 700;
+  padding-right: 4px;
+}
+.management-content-container .management-content .rooms .book-room:hover {
+  background-color: #edeced;
+}
+
+.edit-room-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+}
+.edit-room-container.active {
+  display: flex;
+}
+.edit-room-container .edit-room-modal {
+  width: 50%;
+  height: 83%;
+  background-color: white;
+  color: black;
+  padding: 4px 20px;
+  border-radius: 4px;
+  position: relative;
+  animation: fadeIn ease 0.5s;
+}
+.edit-room-container .edit-room-modal .icon-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px;
+  font-size: 24px;
+}
+.edit-room-container .edit-room-modal .icon-close:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.edit-room-container .edit-room-modal .title {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+.edit-room-container .edit-room-modal .content input,
+.edit-room-container .edit-room-modal .content textarea {
+  width: 100%;
+  padding: 5px 14px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #ccc;
+  margin: 4px 0 8px 0;
+}
+.edit-room-container .edit-room-modal .content label {
+  font-weight: 500;
+}
+.edit-room-container .edit-room-modal .content .btn-submit {
+  margin-top: 12px;
+  padding: 8px 20px;
+}
+
+.add-room-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+}
+.add-room-container.active {
+  display: flex;
+}
+.add-room-container .add-room-modal {
+  width: 50%;
+  height: 83%;
+  background-color: white;
+  color: black;
+  padding: 4px 20px;
+  border-radius: 4px;
+  position: relative;
+  animation: fadeIn ease 0.5s;
+}
+.add-room-container .add-room-modal .icon-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px;
+  font-size: 24px;
+}
+.add-room-container .add-room-modal .icon-close:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.add-room-container .add-room-modal .title {
+  text-align: center;
+  padding: 12px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+.add-room-container .add-room-modal .content input,
+.add-room-container .add-room-modal .content textarea {
+  width: 100%;
+  padding: 5px 14px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #ccc;
+  margin: 4px 0 8px 0;
+}
+.add-room-container .add-room-modal .content label {
+  font-weight: 500;
+}
+.add-room-container .add-room-modal .content .btn-submit {
+  margin-top: 12px;
+  padding: 8px 20px;
+}
+
+.edit-book-room-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+}
+.edit-book-room-container.active {
+  display: flex;
+}
+.edit-book-room-container .edit-book-room-modal {
+  width: 50%;
+  height: 83%;
+  background-color: white;
+  color: black;
+  padding: 4px 20px;
+  border-radius: 4px;
+  position: relative;
+  animation: fadeIn ease 0.5s;
+}
+.edit-book-room-container .edit-book-room-modal .icon-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px;
+  font-size: 24px;
+}
+.edit-book-room-container .edit-book-room-modal .icon-close:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.edit-book-room-container .edit-book-room-modal .title {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+.edit-book-room-container .edit-book-room-modal .content input {
+  width: 100%;
+  padding: 6px 14px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #ccc;
+  margin: 4px 0 8px 0;
+}
+.edit-book-room-container .edit-book-room-modal .content label {
+  font-weight: 500;
+}
+.edit-book-room-container .edit-book-room-modal .content .btn-submit {
+  margin-top: 14px;
+  padding: 8px 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=management.css.map */
+
+
+
+body {
+  background: #f5f5f5;
+  margin-top: 20px;
+}
+
+.ui-w-80 {
+  width : 80px !important;
+  height: auto;
+}
+
+.btn-default {
+  border-color: rgba(24, 28, 33, 0.1);
+  background  : rgba(0, 0, 0, 0);
+  color       : #4E5155;
+}
+
+label.btn {
+  margin-bottom: 0;
+}
+
+.btn-outline-primary {
+  border-color: #26B4FF;
+  background  : transparent;
+  color       : #26B4FF;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.text-light {
+  color: #babbbc !important;
+}
+
+.btn-facebook {
+  border-color: rgba(0, 0, 0, 0);
+  background  : #3B5998;
+  color       : #fff;
+}
+
+.btn-instagram {
+  border-color: rgba(0, 0, 0, 0);
+  background  : #000;
+  color       : #fff;
+}
+
+.card {
+  background-clip: padding-box;
+  box-shadow     : 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.row-bordered {
+  overflow: hidden;
+}
+
+.account-settings-fileinput {
+  position  : absolute;
+  visibility: hidden;
+  width     : 1px;
+  height    : 1px;
+  opacity   : 0;
+}
+
+.account-settings-links .list-group-item.active {
+  font-weight: bold !important;
+}
+
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+  background: transparent !important;
+}
+
+.account-settings-multiselect~.select2-container {
+  width: 100% !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+  padding     : 0.85rem 1.5rem;
+  border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+  color: #4e5155 !important;
+}
+
+.material-style .account-settings-links .list-group-item {
+  padding     : 0.85rem 1.5rem;
+  border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.material-style .account-settings-links .list-group-item.active {
+  color: #4e5155 !important;
+}
+
+.dark-style .account-settings-links .list-group-item {
+  padding     : 0.85rem 1.5rem;
+  border-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.dark-style .account-settings-links .list-group-item.active {
+  color: #fff !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+  color: #4E5155 !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+  padding     : 0.85rem 1.5rem;
+  border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.post-content {
+transition: transform 0.3s ease;
+}
+
+.post-content:hover {
+transform: scale(1.05);
+}
+.post-content.selected {
+border: 2px solid #d9ff00;
+}
+.post-detail-modal {
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+}
+
+.post-detail-content {
+background-color: #fefefe;
+padding: 20px;
+border-radius: 8px;
+text-align: center;
+}
+
+.post-detail-content img {
+max-width: 100%;
+max-height: 400px;
+}
+
+.close-modal {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 20px;
+cursor: pointer;
+color: #555;
+}
+
+
+.post-detail-modal .red-text {
+color: red; 
+font-size: 20px; 
+}
+    
+  .post{
+    display: block;
+  }
+  
+  .list-book-room {
+    display: block;
+  }
+  
+  .list-staff {
+    display: block;
+  }
+
+  
+  .account {
+    display: block;
+  }
+  
+ 
+  
+  
+  .list-room {
+    display: block;
+  }
+  

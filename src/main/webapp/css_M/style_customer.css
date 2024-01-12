@@ -1,0 +1,179 @@
+.main-content {
+    background-image: url("background.jpg"); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+}
+
+.main-text {
+    font-size: 50px;
+    color: black;
+    margin-top: 150px;
+    letter-spacing: 5px;
+}
+
+/* Custom CSS for navbar */
+.navbar-custom {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #333;
+    border-color: #333;
+    color: white;
+    
+}
+
+.navbar-custom .navbar-nav > li{
+    display: flex;
+    margin: 5px 0px;
+    padding: 0 100px;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    flex-direction: none;
+    color: white;
+    text-decoration:none;
+    border-bottom: none;
+   
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+    color:darkgray;
+}
+#loginContainer {
+    color:black;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    background: white;
+    padding: 20px;
+    border: 2px solid black; /* Đổi độ dày và màu sắc của đường bo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Đặt độ rộng của khung */
+    height: 300px; /* Đặt chiều cao của khung */
+    box-sizing: border-box; /* Đảm bảo rằng border và padding không làm thay đổi kích thước toàn bộ của khung */
+}
+
+.form-inline{
+    justify-content: flex-start;
+    background-color: none;
+    display:flex;
+    grid-template-columns: 5fr 5fr 5fr 5fr 5fr 5fr;
+    
+}
+.form-group{
+    margin:5px ;
+    padding:5px;
+    background-color:none ;
+    color: black;
+}
+.form-label{
+    display: block;
+}
+#filter,#check-in,
+#check-out {
+    width: 300px; /* Đặt độ rộng của ô đầu vào thành 150px */
+    height: 40px;
+}
+#adults{
+    border-radius:10%;
+    width:110px;
+    height: 40px;
+}
+.btn-search {
+    border-color: black;
+    margin-top:2.5rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    width: 100px; /* Đặt độ rộng bằng 100% */
+    height: 40px;
+    background-color: #333;
+    color:white;
+}
+
+.input-group {
+    position: relative; /* Đặt vị trí tương đối cho nhóm nhập */
+}
+.input-icon {
+    font-size: 30px;
+    position: absolute; /* Đặt vị trí tuyệt đối cho biểu tượng */
+    right: 10px; /* Đặt biểu tượng cách lề phải 10px */
+    top: 50%; /* Đặt biểu tượng ở giữa chiều cao của trường nhập */
+    transform: translateY(-50%); /* Điều chỉnh biểu tượng để căn giữa theo trục y */
+}
+
+.bi.bi-filter-square-fill {
+    font-size: 30px;
+    position: absolute; /* Đặt vị trí tuyệt đối cho biểu tượng */
+    right: 10px; 
+    top: -3px;
+
+    
+}
+.infor{
+    font-size: 50px;
+    margin-left:400px;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: none;
+    --bs-gutter-y: 0;
+}
+.owl-nav {
+    text-align: center;
+    opacity: 0.5;
+}
+
+.owl-prev,
+.owl-next {
+    display: inline-block;
+    margin: 0 10px; /* Điều chỉnh khoảng cách giữa nút prev và next nếu cần thiết */
+}
+  
+  /*  đổi kích thước của mũi tên*/
+.owl-prev span,
+.owl-next span {
+    font-size: 100px;
+}
+
+/*footer*/
+footer{
+    float:left;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: black;
+}
+.boxcenter2{
+    font-size: 100px;
+    text-align:center ;
+    width:100%;
+    height: 300px;
+    margin: 0 auto;
+
+}
+.box{
+    width: 33%;
+    float: left;
+    text-decoration:underline;
+    margin-top: 15px;
+}
+
+.boxfooter3{
+    width:20%;
+    font-size: 20px;
+    text-decoration: none !important; /* Loại bỏ gạch chân */
+    text-align:justify;
+
+}
+.colorc{
+    color: #ccc;
+}
+h4{
+    text-decoration:underline !important; /* Loại bỏ gạch chân */
+}
+
+.boxfooter3 .add{
+    margin-top: 15px;
+}

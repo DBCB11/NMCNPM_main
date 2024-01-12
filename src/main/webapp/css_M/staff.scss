@@ -1,0 +1,498 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.staff-container {
+  position: relative;
+
+  .staff-sidebar {
+    width: 250px;
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    color: white;
+    .staff-sidebar-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      background-color: #0b96bcd9;
+      .house-icon {
+        padding-right: 8px;
+      }
+    }
+  }
+  .staff-sidebar-content {
+    height: 100%;
+    background-color: #2c2f39;
+
+    .sidebar-content-list {
+      ul {
+        .active {
+          background-color: #6c6c6c;
+        }
+        list-style-type: none;
+        padding: 0;
+        li {
+          height: 70px;
+          padding-left: 20px;
+
+          border-bottom: 1px solid rgb(165, 165, 165);
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          &:hover {
+            background-color: #6c6c6c;
+          }
+
+          i {
+            width: 30px;
+            font-size: 20px;
+          }
+        }
+        // .avatar {
+        //   width: 32px;
+        //   height: 32px;
+        //   border-radius: 50%;
+        //   margin-right: 10px;
+        // }
+      }
+    }
+  }
+  // .sidebar-content-header {
+  //   padding-left: 16px;
+  //   height: 70px;
+  //   display: flex;
+  //   align-items: center;
+  //   border-bottom: 1px solid rgb(165, 165, 165);
+
+  // }
+}
+
+.staff-sidebar-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 250px);
+  padding-right: 16px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  background-color: #0b96bc;
+  color: white;
+  z-index: 1;
+
+  .staff-sidebar-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+}
+
+// danh sách phòng
+
+.list-room {
+  display: none;
+}
+
+.list-room.active {
+  display: block;
+}
+
+.staff-content-container {
+  position: absolute;
+  margin-top: 60px;
+  right: 0;
+  width: calc(100% - 250px);
+  // background-color: #f5f5fb;
+  .title {
+    color: #000000;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    height: 40px;
+    margin-left: 12px;
+
+    align-items: center;
+  }
+
+  .staff-content {
+    // position: relative;
+    background-color: white;
+    margin: 4px 12px 0 16px;
+    padding: 12px 0;
+    border-radius: 8px;
+    // box-shadow: -1px -1px 8px #aeaeae;
+    .add-room {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .btn-add-room {
+      border: none;
+      background-color: #0a96b4;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-right: 12px;
+      // position: absolute;
+    }
+    .rooms {
+      margin: 12px 0;
+      table,
+      th,
+      td {
+        border: 1px solid rgb(197, 197, 197);
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 12px 8px;
+      }
+      .room {
+        &:hover {
+          background-color: #edeced;
+        }
+      }
+      .room-image {
+        width: 150x;
+        height: 150px;
+        border-radius: 4px;
+      }
+      ul {
+        list-style: none;
+        li {
+          padding: 3px 0;
+        }
+      }
+      .btn-edit-room {
+        width: 30px;
+        height: 30px;
+        background-color: #0076ff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+      .btn-delete-room {
+        width: 30px;
+        height: 30px;
+        background-color: #d13d3c;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+//profile
+
+.profile {
+  display: none;
+}
+
+.profile.active {
+  display: block;
+}
+
+.staff-content-container {
+  .staff-profile {
+    margin: 8px 50px;
+    .profile-input {
+      display: flex;
+      align-items: center;
+      margin: 8px 0 16px 0;
+      i {
+        font-size: 24px;
+        width: 50px;
+      }
+
+      .form-control {
+        &:focus {
+          border-color: #ccc;
+          box-shadow: none;
+        }
+      }
+    }
+    label {
+      font-weight: 600;
+    }
+  }
+}
+
+// Danh sách đơn đặt phòng
+
+.list-book-room {
+  display: none;
+  .search {
+    margin: 12px 0;
+    input {
+      margin: 16px 12px 0 16px;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      width: 400px;
+      border-radius: 3px;
+    }
+    .btn-search {
+      width: 120px;
+      height: 42px;
+      background-color: #1f9448;
+      border: none;
+      border-radius: 4px;
+      color: white;
+    }
+  }
+}
+
+.list-book-room.active {
+  display: block;
+}
+
+.staff-content-container {
+  .staff-content {
+    .rooms {
+      .book-room {
+        ul {
+          padding: 0 10px;
+          margin: 8px 0;
+          span {
+            font-weight: 700;
+            padding-right: 4px;
+          }
+        }
+        &:hover {
+          background-color: #edeced;
+        }
+      }
+    }
+  }
+}
+
+// Chỉnh sửa thông tin phòng
+
+.edit-room-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  &.active {
+    display: flex;
+  }
+
+  .edit-room-modal {
+    width: 50%;
+    height: 68%;
+    background-color: white;
+    color: black;
+    padding: 4px 20px;
+    border-radius: 4px;
+    position: relative;
+    animation: fadeIn ease 0.5s;
+
+    .icon-close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px;
+      font-size: 24px;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+      }
+    }
+
+    .title {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .content {
+      input,
+      textarea {
+        width: 100%;
+        padding: 5px 14px;
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid #ccc;
+        margin: 4px 0 8px 0;
+      }
+      label {
+        font-weight: 500;
+      }
+      .btn-submit {
+        margin-top: 12px;
+        padding: 8px 20px;
+      }
+    }
+  }
+}
+
+.add-room-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    display: flex;
+  }
+
+  .add-room-modal {
+    width: 50%;
+    height: 73%;
+    background-color: white;
+    color: black;
+    padding: 4px 20px;
+    border-radius: 4px;
+    position: relative;
+    animation: fadeIn ease 0.5s;
+    .icon-close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px;
+      font-size: 24px;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+      }
+    }
+
+    .title {
+      text-align: center;
+      padding: 12px 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .content {
+      input,
+      textarea {
+        width: 100%;
+        padding: 5px 14px;
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid #ccc;
+        margin: 4px 0 8px 0;
+      }
+      label {
+        font-weight: 500;
+      }
+      .btn-submit {
+        margin-top: 12px;
+        padding: 8px 20px;
+      }
+    }
+  }
+}
+
+// Chỉnh sửa đơn đặt phòng
+
+.edit-book-room-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    display: flex;
+  }
+
+  .edit-book-room-modal {
+    width: 50%;
+    height: 75%;
+    background-color: white;
+    color: black;
+    padding: 4px 20px;
+    border-radius: 4px;
+    position: relative;
+    animation: fadeIn ease 0.5s;
+    .icon-close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px;
+      font-size: 24px;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+      }
+    }
+
+    .title {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .content {
+      input {
+        width: 100%;
+        padding: 6px 14px;
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid #ccc;
+        margin: 4px 0 8px 0;
+      }
+      label {
+        font-weight: 500;
+      }
+      .btn-submit {
+        margin-top: 14px;
+        padding: 8px 20px;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
